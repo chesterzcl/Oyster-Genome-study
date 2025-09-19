@@ -8,22 +8,18 @@
 module load minimap2
 module load SAMtools
 
-# Define input and output
 GENOME="/home/zl436/palmer_scratch/oyster_genome/Contigs_dedup_scfd_3ddna_mc_hp/primary_dedup_chr_masked_hp_sealed.fa"
 READS="/home/zl436/ycga_work/oyster_genome/draft_genome/PacBio/hifi_reads/11S_pb.fastq.gz"
 OUT_PREFIX="/home/zl436/palmer_scratch/oyster_genome/Contigs_dedup_scfd_3ddna_mc_hp/hifi_alignment"
 
-# Optional: index the genome (only needed once)
 if [ ! -f "${GENOME}.mmi" ]; then
     echo "Indexing genome..."
     minimap2 -d ${GENOME}.mmi ${GENOME}
 fi
 
-# Align reads (choose preset based on read type)
-# Use -x map-hifi for HiFi, or -x map-pb for CLR/continuous long reads
 minimap2 -t ${SLURM_CPUS_PER_TASK} -ax map-hifi ${GENOME}.mmi ${READS} | \
 samtools view -@ 4 -bS - | samtools sort -@ 4 -o ${OUT_PREFIX}.bam
 
-# Index the sorted BAM
+
 samtools index ${OUT_PREFIX}.bam
 

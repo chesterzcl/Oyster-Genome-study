@@ -2,10 +2,9 @@
 
 
 TRF_DAT="$1"
-FAI="$2"  # .fai index of your genome (chrom sizes)
+FAI="$2"
 PREFIX="satellite_analysis"
 
-# Output files
 TRF_BED="${PREFIX}_all_trf.bed"
 SAT_BED="${PREFIX}_satellite_filtered.bed"
 MOTIF_COUNTS="${PREFIX}_motif_counts.tsv"

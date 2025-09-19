@@ -5,12 +5,9 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=40G
 
-# Load samtools module
 module load SAMtools
 
-# Define input BAM and output path
 DIR="/home/zl436/palmer_scratch/bam/2nd_draft_final"
-#DIR="/home/zl436/palmer_scratch/oyster_genome/Contigs_dedup_scfd_3ddna_mc_hp"
 BAM="${DIR}/11S_st_dr_filtered.bam"
 OUT="/home/zl436/palmer_scratch/oyster_genome/Contigs_dedup_scfd_3ddna_mc_hp/wgs_alignment_depth.txt"
 BIN="/home/zl436/palmer_scratch/oyster_genome/Contigs_dedup_scfd_3ddna_mc_hp/wgs_depth_binned.txt"

@@ -4,10 +4,6 @@ INPUT_GFF="/home/zl436/palmer_scratch/oyster_genome/Contigs_dedup_scfd_3ddna_mc_
 OUTPUT_BED="CV_final.bed"
 WINDOW=2000
 
-#############################################
-# Check input exists
-#############################################
-
 awk -F'\t' 'BEGIN {OFS="\t"}
   $3 == "gene" {
     chrom=$1

@@ -4,15 +4,13 @@
 #SBATCH --mem=4G
 #SBATCH --cpus-per-task=2
 
-# Load BLAST+ module (adjust based on your cluster setup)
+
 module load BLAST+
 
-# Define input and output
 ASSEMBLY="/home/zl436/palmer_scratch/oyster_genome/Contigs_dedup_scfd_3ddna_mc/primary_dedup_chr.fa"
 QUERY="/home/zl436/palmer_scratch/oyster_genome/Contigs_dedup_scfd_3ddna_mc/CV_sig.fa"
 DB_NAME="/home/zl436/palmer_scratch/oyster_genome/Contigs_dedup_scfd_3ddna_mc/primary_dedup_chr_blast_db"
 OUT_FILE="/home/zl436/palmer_scratch/oyster_genome/Contigs_dedup_scfd_3ddna_mc/blast_op.tsv"
-
 
 makeblastdb -in ${ASSEMBLY} -dbtype nucl -out ${DB_NAME}
 
