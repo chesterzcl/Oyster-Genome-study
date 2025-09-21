@@ -14,5 +14,5 @@ This repository contains code/pipeline of the genome assembly, annotation, and c
 ## Contents
 - **Assembly** — PacBio HiFi + Illumina + Hi-C integration (hifiasm, purge_dups, 3D-DNA, Juicebox curation)
 - **Annotation** — BRAKER gene prediction, repeat annotation, regulatory landscapes
-- **Multi-omics integration** — WGS,RNA-sequencing,ATAC-seq,Hi-C
+- **Multi-omics integration** — WGS (haplotype structure), RNA-seq (stress response activation), ATAC-seq (regulatory landscape) and Hi-C (topological profile)
 - **Evolutionary analysis** — synteny alignments, chromosome rearrangements, gene family evolution
