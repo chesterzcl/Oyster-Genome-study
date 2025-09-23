@@ -12,6 +12,9 @@ This repository contains code/pipeline of the genome assembly, annotation, and c
 
 
 ## Contents
+
+This repository contains all scripts and pipelines used in the multi-omic oyster interrogation paper, including the following.
+
 - **Assembly** — PacBio HiFi + Illumina + Hi-C integration (hifiasm, purge_dups, 3D-DNA, Juicebox curation)
 - **Annotation** — BRAKER gene prediction, repeat annotation, regulatory landscapes
 - **Multi-omics integration** — WGS (haplotype structure), RNA-seq (stress response activation), ATAC-seq (regulatory landscape) and Hi-C (topological profile)
